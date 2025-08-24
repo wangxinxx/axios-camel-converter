@@ -1,4 +1,5 @@
-# simple-axios-case-converter
+# axios-camel-converter
+from simple-axios-case-converter
 
 [![npm](https://img.shields.io/npm/v/simple-axios-case-converter.svg)](https://www.npmjs.com/package/simple-axios-case-converter)
 [![test](https://github.com/yutak23/simple-axios-case-converter/actions/workflows/test.yaml/badge.svg)](https://github.com/yutak23/simple-axios-case-converter/actions/workflows/test.yaml)
@@ -26,13 +27,13 @@ With this library, you will be free from converting from camelCase to snake_case
 ### npm
 
 ```sh
-$ npm install simple-axios-case-converter
+$ npm install axios-camel-converter
 ```
 
 ### yarn
 
 ```sh
-$ yarn add simple-axios-case-converter
+$ yarn add axios-camel-converter
 ```
 
 ## Usage
@@ -41,7 +42,7 @@ $ yarn add simple-axios-case-converter
 
 ```ts
 import axios, { AxiosResponse } from 'axios';
-import axiosCaseConverter from 'simple-axios-case-converter';
+import axiosCamelConverter from 'axios-camel-converter';
 
 interface User {
 	id: number;
@@ -51,7 +52,7 @@ interface User {
 }
 
 // setting simple axios case converter
-axiosCaseConverter(axios);
+axiosCamelConverter(axios);
 
 const res: AxiosResponse<User> = await axios.get('https://example.com/api/v1/me');
 // you need not convert response `data` to camelCase (typeof res.data is `User`)
@@ -81,10 +82,10 @@ axios.delete('https://example.com/api/v1/address/123', { data: { addressId: 123 
 
 ```js
 import axios from 'axios';
-import axiosCaseConverter from 'simple-axios-case-converter';
+import axiosCamelConverter from 'axios-camel-converter';
 
 // setting simple axios case converter
-axiosCaseConverter(axios);
+axiosCamelConverter(axios);
 
 const res = await axios.get('https://example.com/api/v1/me');
 // you need not convert response `data` to camelCase
@@ -114,17 +115,17 @@ Note that you should be `require('...').default`.
 
 ```js
 const axios = require('axios');
-const axiosCaseConverter = require('simple-axios-case-converter').default;
+const axiosCamelConverter = require('axios-camel-converter').default;
 
 // setting simple axios case converter
-axiosCaseConverter(axios);
+axiosCamelConverter(axios);
 
 // after, the implementation is the same as the ES Module implementation
 ```
 
 ## API
 
-`axiosCaseConverter: (axios, options)` -> `{ requestInterceptorId: number, responseInterceptorId: number }`
+`axiosCamelConverter: (axios, options)` -> `{ requestInterceptorId: number, responseInterceptorId: number }`
 
 ### options
 
