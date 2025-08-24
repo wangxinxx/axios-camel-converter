@@ -145,3 +145,11 @@ dist
 
 esm/
 cjs/
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/axios-camel-converter.iml
+/.idea/modules.xml
+/.idea/prettier.xml
+/.idea/vcs.xml
